@@ -1,3 +1,5 @@
+<html>
+
 <?php 
     
         $mysqli = new mysqli("localhost","root","","invitados");
@@ -39,7 +41,12 @@
 
 
                 echo "Esta persona no esta invitada";
+
+                
             }
-         
-    
+
     ?>
+    <script type="text/javascript">
+        setTimeout("window.location='index.php'",5000);
+        </script>
+</html>
