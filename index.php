@@ -8,17 +8,20 @@
     <title>Document</title>
 </head>
 <body>
-   
-    <div class="formulario-padre">
-        <div class="formulario">
-            <form action="consultar.php" method="post">
-
-            <label for="cedula">Ingrese su CI sin puntos ni guiones</label><br>
-            <input class="ingresar" id="cedula" type="numer" name="cedula" required><br>
-            <button class="btn" for="cedula" type="submit">Ingresar</button>
-            </form>
-        </div>
-    </div>
+<h1>Bienvenid@s</h1>
+<div class="contenedor">
+    <form action="consultar.php" method="post">
+      <div class="contenedor2">
+        <a href="generarganador.php"><img src="LOGOS.gif" alt="" width="450px"></a>
+      </div>
+      <div class="margen">
+        <h2>Ingrese su N° de documento <br> sin puntos ni guiones</h2>
+        <label for="cedula"></label>
+        <input type="number" name="cedula" id="cedula" placeholder="Documento" required />
+        <button for="cedula" type="submit">INGRESAR</button><br>
+      </div>
+    </form>
+</div>
    
 
 </body>

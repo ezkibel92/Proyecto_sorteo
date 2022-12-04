@@ -1,4 +1,3 @@
-<html>
 
 <?php 
     
@@ -46,6 +45,7 @@
             }
 
     ?>
+<html>
     <script type="text/javascript">
         setTimeout("window.location='index.php'",5000);
         </script>

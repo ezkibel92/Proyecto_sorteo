@@ -15,7 +15,7 @@
 </div>
 
 <script type="text/javascript">
-setTimeout("window.location='sorteo.php'",10000);
+setTimeout("window.location='ganadorPrincipal.php'",10000);
 </script>
 
 </body>

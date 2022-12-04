@@ -34,37 +34,25 @@
 
     $mysqli = new mysqli("localhost","root","","invitados");
 
-    $contador = 0;
+   
 
-
-  while($contador < 3){
-    $contador = $contador + 1;
     $extraerDatos1 = mysqli_query($mysqli, "SELECT * FROM sorteo ORDER BY RAND() LIMIT 1;");
-    $extraerPremio1 = mysqli_query($mysqli, "SELECT MIN(idpremio), idpremio, nombre, imagen FROM premios LIMIT 1;");
     $extraerGanador1 = mysqli_fetch_array($extraerDatos1);
-    $extraerSorteo1 = mysqli_fetch_array($extraerPremio1);
     $nombre1 = $extraerGanador1['nombre'];
     $ci1 = $extraerGanador1['ci'];
-    $idPremio = $extraerSorteo1['idpremio'];
-    $premioNombre1 = $extraerSorteo1['nombre'];
-    $premioImagen1 = $extraerSorteo1['imagen'];
-
+    $auto = "AUTO KWID ZEN 0KM";
     echo "
           <div class='premios'>
             <center>
-            {$idPremio}
             <h2>Ganad@r <span>{$nombre1}</span></h2>
-            <img src='{$premioImagen1}'><br>
-            <p>{$premioNombre1}</p>
+            <img src='S.G.A/imagenes/auto.jpg'><br>
+            <p>AUTO KWID ZEN 0KM</p>
             </center>
           </div>";
 
-    mysqli_query($mysqli, "INSERT INTO ganadores (ci,nombre,premio) VALUES ('$ci1','$nombre1','$premioNombre1')");
+    mysqli_query($mysqli, "INSERT INTO ganadores (ci,nombre,premio) VALUES ('$ci1','$nombre1','$auto')");
     mysqli_query($mysqli, "DELETE FROM sorteo WHERE ci=$ci1");
-    mysqli_query($mysqli, "DELETE FROM premios WHERE idpremio='$idPremio'");
-  }
-    
-    
+
  ?>
  </div>
  <form action="generarGanador.php">
@@ -72,6 +60,3 @@
     </form>
 </body>
 </html>
-
-
-
