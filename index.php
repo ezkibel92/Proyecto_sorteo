@@ -8,7 +8,26 @@
     <title>Document</title>
 </head>
 <body>
+
 <h1>Bienvenid@s</h1>
+
+
+<nav class="header__nav nav-bar">
+		<div class="toggle-menu">
+			<div class="line line1"></div>
+			<div class="line line2"></div>
+			<div class="line line3"></div>
+		</div>
+		<ul class="nav-list">
+			<li class="nav-list-item"><a href="index.php" class="nav-link">Inicio</a></li>
+			<li class="nav-list-item"><a href="generarganador.php" class="nav-link">Sorteos</a></li>
+			<li class="nav-list-item">
+				<a href="sorteoPrincipal.php" class="nav-link">Sorteo principal</a>
+			</li>
+		</ul>
+	</nav>
+
+
 <div class="contenedor">
     <form action="consultar.php" method="post">
       <div class="contenedor2">
@@ -23,6 +42,6 @@
     </form>
 </div>
    
-
+<script src="js.js" ></script>
 </body>
 </html>

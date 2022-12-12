@@ -11,7 +11,7 @@
 <div class="center">
     <div class="ring">  
     </div>
-    <div class="text">Generando ganador</div>
+    <div class="text">Generando ganadores</div>
 </div>
 
 <script type="text/javascript">

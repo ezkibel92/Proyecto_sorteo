@@ -12,10 +12,10 @@
     .padre-premios{
       display: flex;
       justify-content: space-evenly;
-      margin-top: 10%;
+      margin-top: 2%;
     }
     .premios{
-    width: 25vw;
+    width: 30vw;
     } 
 
     .premios p{
@@ -24,7 +24,11 @@
     }
 
     .premios span{
-      color: red;
+      color: #ffffff;
+    }
+
+    .premios img{
+      width: 100%;
     }
 
 
@@ -44,7 +48,7 @@
     echo "
           <div class='premios'>
             <center>
-            <h2>Ganad@r <span>{$nombre1}</span></h2>
+            <h2><span>{$nombre1}</span></h2>
             <img src='S.G.A/imagenes/auto.jpg'><br>
             <p>AUTO KWID ZEN 0KM</p>
             </center>
@@ -55,8 +59,5 @@
 
  ?>
  </div>
- <form action="generarGanador.php">
-    <button >Volver</button>
-    </form>
 </body>
 </html>

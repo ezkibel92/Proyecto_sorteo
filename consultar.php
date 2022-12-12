@@ -1,4 +1,4 @@
-
+<html>
 <?php 
     
         $mysqli = new mysqli("localhost","root","","invitados");
@@ -27,7 +27,21 @@
                 $antiguedad = date("Y-m-d", strtotime($arrayDeDatos['antiguedad']));
                 $cargo = $arrayDeDatos['cargo'];
 
-                echo "Bienvenido $nombre";
+                echo "
+                <link rel='stylesheet' href='style.css'>
+                    <h1>Bienvenid@s</h1>
+                    <div class='contenedor'>
+                    <form action='index.html' target='' method='get' name='Validación para ingreso'>
+                    <div class='margenCIerror'>
+                        <h2>Bienvenid@</h2>
+                        <h2>{$nombre}</h2>
+                    </div>
+                      <div class='contenedorLogo'>
+                        <img src='LOGOS.gif' alt='' width='450px'>
+                      </div>
+                    </form>
+                </div>
+                ";
 
                 if($antiguedad < $fechaLimite && $cargo == 1){
 
@@ -39,13 +53,24 @@
             }else{
 
 
-                echo "Esta persona no esta invitada";
+                echo "<link rel='stylesheet' href='style.css'>
+                        <h1>¡Vuelva a ingresar su documento!</h1>
+                        <div class='contenedor'>
+                        <form action='index.html' target='' method='get' name='Validación para ingreso'>
+                        <div class='margenCIerror'>
+                         <h2>El documento ingresado no es correcto  </h2>
+                        </div>
+                        <div class='contenedorLogo'>
+                        <img src='LOGOS.gif' alt='' width='450px'>
+                        </div>
+                        </form>
+                        </div>";
 
                 
             }
 
     ?>
-<html>
+
     <script type="text/javascript">
         setTimeout("window.location='index.php'",5000);
         </script>

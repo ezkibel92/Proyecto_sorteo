@@ -8,14 +8,15 @@
   <title>Ganadores</title>
 </head>
 <body>
+  <h1>¡Felicidades!</h1>
   <style>
     .padre-premios{
       display: flex;
       justify-content: space-evenly;
-      margin-top: 10%;
+      margin-top: 2%;
     }
     .premios{
-    width: 25vw;
+    width: 30vw;
     } 
 
     .premios p{
@@ -24,9 +25,12 @@
     }
 
     .premios span{
-      color: red;
+      color: #ffffff;
     }
 
+    .premios img{
+      width: 100%;
+    }
 
   </style>
   <div class="padre-premios">
@@ -51,9 +55,8 @@
 
     echo "
           <div class='premios'>
-            <center>
-            {$idPremio}
-            <h2>Ganad@r <span>{$nombre1}</span></h2>
+          <center>
+            <h2><span>{$nombre1}</span></h2>
             <img src='{$premioImagen1}'><br>
             <p>{$premioNombre1}</p>
             </center>
@@ -67,9 +70,15 @@
     
  ?>
  </div>
- <form action="generarGanador.php">
-    <button >Volver</button>
-    </form>
+    <div class="botonGanador">
+      <a href="generarganador.php">
+        <center>
+        <div class="botonFalso2">
+          <p>Volver</p> 
+        </div>
+      </center>
+      </a>
+    </div>
 </body>
 </html>
 
